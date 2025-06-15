@@ -6,5 +6,4 @@ repos:
       args:
         - --args=-recursive
     - id: terraform_validate
-      args:
-        - --args=-yaml
+      # args:
