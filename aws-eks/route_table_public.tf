@@ -1,4 +1,4 @@
-resource "aws_route_table" "ctf_eks_route_table" {
+resource "aws_route_table" "ctf_eks_route_table_public" {
   vpc_id = aws_vpc.ctf_eks_vpc.id
 
   route {
