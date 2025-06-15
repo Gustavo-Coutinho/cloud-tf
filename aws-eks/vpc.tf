@@ -2,8 +2,9 @@ resource "aws_vpc" "ctf_eks_vpc" {
   cidr_block           = var.cidr_block
   enable_dns_support   = true
   enable_dns_hostnames = true
-  tags = {
-    Name = "ctf-vpc"
-  }
+  tags = merge(
+    local.tags,
+    {
+      Name = "ctf-vpc"
+  })
 }
-
