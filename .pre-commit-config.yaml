@@ -5,3 +5,6 @@ repos:
     - id: terraform_fmt
       args:
         - --args=-recursive
+    - id: terraform_validate
+      args:
+        - --args=-yaml
