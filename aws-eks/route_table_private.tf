@@ -1,5 +1,5 @@
 # para uso do NAT Gateway
-resource "aws_route_table" "ctf_eks_route_table_private-1a" {
+resource "aws_route_table" "ctf_eks_route_table_private_1a" {
   vpc_id = aws_vpc.ctf_eks_vpc.id
 
   route {
@@ -13,7 +13,7 @@ resource "aws_route_table" "ctf_eks_route_table_private-1a" {
       Name = "${var.project_name}-rtb-private-1a"
   })
 }
-resource "aws_route_table" "ctf_eks_route_table_private-1b" {
+resource "aws_route_table" "ctf_eks_route_table_private_1b" {
   vpc_id = aws_vpc.ctf_eks_vpc.id
 
   route {
