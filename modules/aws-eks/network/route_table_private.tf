@@ -8,7 +8,7 @@ resource "aws_route_table" "ctf_eks_route_table_private_1a" {
   }
 
   tags = merge(
-    local.tags,
+    var.tags,
     {
       Name = "${var.project_name}-rtb-private-1a"
   })
@@ -22,7 +22,7 @@ resource "aws_route_table" "ctf_eks_route_table_private_1b" {
   }
 
   tags = merge(
-    local.tags,
+    var.tags,
     {
       Name = "${var.project_name}-rtb-private-1b"
   })

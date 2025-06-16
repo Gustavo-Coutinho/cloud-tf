@@ -8,7 +8,7 @@ resource "aws_route_table" "ctf_eks_route_table_public" {
   }
 
   tags = merge(
-    local.tags,
+    var.tags,
     {
       Name = "${var.project_name}-rtb-public"
   })

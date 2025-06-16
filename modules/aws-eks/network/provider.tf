@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" {
     bucket = "ctf-terraform-state-gupoco"
-    key    = "terraform.tfstate"
+    key    = "terraform-s3.tfstate"
     region = "us-east-1"
   }
 }
