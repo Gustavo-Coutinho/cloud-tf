@@ -4,3 +4,7 @@ module "ctf_eks_network" {
   project_name = var.project_name
   tags         = local.tags
 }
+
+module "tfstate-aws-s3-setup" {
+  source = "./modules/utils/tfstate-aws-s3-setup"
+}

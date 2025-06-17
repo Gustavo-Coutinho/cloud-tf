@@ -7,11 +7,16 @@ terraform {
   }
   backend "s3" {
     bucket = "ctf-terraform-state-gupoco"
-    key    = "terraform-s3.tfstate"
+    key    = "terraform.tfstate"
     region = "us-east-1"
   }
 }
 
 provider "aws" {
   region = "us-east-1"
+}
+
+import {
+  to = module.tfstate-aws-s3-setup.aws_s3_bucket.ctf_terraform_state_gupoco
+  id = "ctf-terraform-state-gupoco"
 }
