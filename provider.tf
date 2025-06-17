@@ -15,8 +15,8 @@ terraform {
 provider "aws" {
   region = "us-east-1"
 }
-
-import {
-  to = module.tfstate-aws-s3-setup.aws_s3_bucket.ctf_terraform_state_gupoco
-  id = "ctf-terraform-state-gupoco"
-}
+# cuidado: deixar o import aqui vai fazer com que o bucket seja deletado com o `terraform apply -destroy`
+# import {
+#   to = module.tfstate-aws-s3-setup.aws_s3_bucket.ctf_terraform_state_gupoco
+#   id = "ctf-terraform-state-gupoco"
+# }

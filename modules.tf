@@ -5,6 +5,6 @@ module "ctf_eks_network" {
   tags         = local.tags
 }
 
-module "tfstate-aws-s3-setup" {
-  source = "./modules/utils/tfstate-aws-s3-setup"
-}
+# module "tfstate-aws-s3-setup" {
+#   source = "./modules/utils/tfstate-aws-s3-setup"
+# }
