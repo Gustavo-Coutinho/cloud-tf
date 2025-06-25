@@ -25,6 +25,7 @@ module "ctf_eks_nodegroup" {
 module "ctf_eks_alb_controller" {
   source       = "./modules/aws-eks/alb-controller"
   project_name = var.project_name
+  cluster_name = module.ctf_eks_cluster.saida_cluster_name
   tags         = local.tags
   oidc         = module.ctf_eks_cluster.saida_oidc
 }
