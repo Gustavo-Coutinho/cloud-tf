@@ -14,12 +14,19 @@ module "ctf_eks_cluster" {
 }
 
 module "ctf_eks_nodegroup" {
-  source       = "./modules/aws-eks/nodegroup"
-  project_name = var.project_name
-  cluster_name = module.ctf_eks_cluster.saida_cluster_name
+  source         = "./modules/aws-eks/nodegroup"
+  project_name   = var.project_name
+  cluster_name   = module.ctf_eks_cluster.saida_cluster_name
   subnet_priv_1a = module.ctf_eks_network.subnet_priv_1a
   subnet_priv_1b = module.ctf_eks_network.subnet_priv_1b
+  tags           = local.tags
+}
+
+module "ctf_eks_alb_controller" {
+  source       = "./modules/aws-eks/alb-controller"
+  project_name = var.project_name
   tags         = local.tags
+  oidc         = module.ctf_eks_cluster.saida_oidc
 }
 
 # module "tfstate-aws-s3-setup" {
