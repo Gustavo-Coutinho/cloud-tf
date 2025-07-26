@@ -15,7 +15,7 @@ resource "aws_eks_cluster" "ctf_eks_cluster" {
     ]
     endpoint_private_access = true
     endpoint_public_access  = true
-    public_access_cidrs     = ["189.33.65.107/32"] # result of curl ifconfig.me
+    public_access_cidrs     = ["189.33.66.193/32"] # result of curl ifconfig.me
   }
 
   # Ensure that IAM Role permissions are created before and deleted
