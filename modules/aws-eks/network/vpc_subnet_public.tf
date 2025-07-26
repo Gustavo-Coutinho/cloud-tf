@@ -7,7 +7,7 @@ resource "aws_subnet" "ctf_eks_subnet_public_1a" {
     var.tags,
     {
       Name                    = "${var.project_name}-subnet-public-1a",
-      "kubenetes.io/role/elb" = 1
+      "kubernetes.io/role/elb" = 1
   })
 }
 resource "aws_subnet" "ctf_eks_subnet_public_1b" {
@@ -19,6 +19,6 @@ resource "aws_subnet" "ctf_eks_subnet_public_1b" {
     var.tags,
     {
       Name                    = "${var.project_name}-subnet-public-1b",
-      "kubenetes.io/role/elb" = 1
+      "kubernetes.io/role/elb" = 1
   })
 }
