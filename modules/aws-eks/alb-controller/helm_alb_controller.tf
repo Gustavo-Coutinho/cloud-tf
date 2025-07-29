@@ -10,6 +10,14 @@ resource "helm_release" "ctf_eks_helm_alb_controller" {
 
   set = [
     {
+      name = "region"
+      value = "${data.aws_region.current.region}"
+    },
+    {
+      name = "vpcId"
+      value = var.vpc_id
+    },
+    {
       name  = "clusterName"
       value = var.cluster_name
     },

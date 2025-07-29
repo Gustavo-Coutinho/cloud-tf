@@ -14,3 +14,7 @@ variable "oidc" {
   type        = string
   description = "OIDC provider URL for the EKS cluster"
 }
+variable "vpc_id" {
+  type        = string
+  description = "VPC ID where the EKS cluster is deployed"
+}

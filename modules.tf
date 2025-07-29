@@ -28,6 +28,7 @@ module "ctf_eks_alb_controller" {
   cluster_name = module.ctf_eks_cluster.saida_cluster_name
   tags         = local.tags
   oidc         = module.ctf_eks_cluster.saida_oidc
+  vpc_id       = module.ctf_eks_network.vpc_id
 }
 
 # module "tfstate-aws-s3-setup" {
