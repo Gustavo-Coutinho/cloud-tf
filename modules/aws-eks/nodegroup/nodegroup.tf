@@ -1,6 +1,6 @@
 resource "aws_eks_node_group" "ctf_eks_nodegroup" {
   cluster_name    = var.cluster_name
-  node_group_name = "example"
+  node_group_name = "${var.project_name}-eks-nodegroup"
   node_role_arn   = aws_iam_role.ctf_eks_iam_nodegroup_role.arn
   subnet_ids = [
     var.subnet_priv_1a,
