@@ -6,4 +6,7 @@ repos:
       args:
         - --args=-recursive
     - id: terraform_validate
-      # args:
+    - id: terraform_docs
+      args:
+        - --args=--output=markdown
+        - --args=--recursive
