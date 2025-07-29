@@ -9,5 +9,4 @@ repos:
     - id: terraform_docs
       args:
         - markdown
-        - --args=--output-file=README.md
         - --args=--recursive
