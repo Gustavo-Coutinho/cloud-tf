@@ -8,6 +8,6 @@ repos:
     - id: terraform_validate
     - id: terraform_docs
       args:
-        - --args=markdown
+        - markdown
         - --args=--output-file=README.md
         - --args=--recursive
