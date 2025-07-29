@@ -9,4 +9,4 @@ repos:
     - id: terraform_docs
       args:
         - markdown
-        - --output-file README.md
+        - --args=--output-file README.md
