@@ -5,16 +5,16 @@ resource "helm_release" "ctf_eks_helm_alb_controller" {
   name       = "aws-load-balancer-controller"
   repository = "https://aws.github.io/eks-charts"
   chart      = "aws-load-balancer-controller"
-  version = "1.13.3"
-  namespace = "kube-system"
+  version    = "1.13.3"
+  namespace  = "kube-system"
 
   set = [
     {
-      name = "region"
+      name  = "region"
       value = "${data.aws_region.current.region}"
     },
     {
-      name = "vpcId"
+      name  = "vpcId"
       value = var.vpc_id
     },
     {

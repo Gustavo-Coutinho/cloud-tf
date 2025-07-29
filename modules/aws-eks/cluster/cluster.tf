@@ -2,7 +2,8 @@ resource "aws_eks_cluster" "ctf_eks_cluster" {
   name = "${var.project_name}-eks-cluster"
 
   access_config {
-    authentication_mode = "API"
+    authentication_mode                         = "API"
+    bootstrap_cluster_creator_admin_permissions = true # Add this line
   }
 
   role_arn = aws_iam_role.ctf_eks_iam_cluster_role.arn
