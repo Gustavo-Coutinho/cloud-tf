@@ -11,6 +11,7 @@ module "ctf_eks_cluster" {
   tags             = var.tags
   public_subnet_1a = module.ctf_eks_network.subnet_pub_1a
   public_subnet_1b = module.ctf_eks_network.subnet_pub_1b
+  seu_ip           = var.seu_ip
 }
 
 module "ctf_eks_nodegroup" {
