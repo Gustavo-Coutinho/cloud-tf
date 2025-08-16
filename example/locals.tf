@@ -9,4 +9,5 @@ locals {
     Platform          = "AWS"
     Purpose           = "Portfolio"
   }
+  your_public_ip = "111.22.33.44"
 }

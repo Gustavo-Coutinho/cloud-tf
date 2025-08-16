@@ -32,7 +32,7 @@ No modules.
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name to be used as prefix for tags | `string` | n/a | yes |
 | <a name="input_public_subnet_1a"></a> [public\_subnet\_1a](#input\_public\_subnet\_1a) | Public subnet 1a for the cluster | `string` | n/a | yes |
 | <a name="input_public_subnet_1b"></a> [public\_subnet\_1b](#input\_public\_subnet\_1b) | Public subnet 1b for the cluster | `string` | n/a | yes |
-| <a name="input_seu_ip"></a> [seu\_ip](#input\_seu\_ip) | Your public IP address to allow access to the EKS cluster. Execute `curl ifconfig.me` to obtain your IP. | `string` | n/a | yes |
+| <a name="input_your_public_ip"></a> [seu\_ip](#input\_seu\_ip) | Your public IP address to allow access to the EKS cluster. Execute `curl ifconfig.me` to obtain your IP. | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | Map of tags to be applied to resources | `map(any)` | n/a | yes |
 
 ## Outputs

@@ -17,7 +17,7 @@ variable "public_subnet_1b" {
   type        = string
   description = "Public subnet 1b for the cluster"
 }
-variable "seu_ip" {
+variable "your_public_ip" {
   type        = string
   description = "Your public IP address to allow access to the EKS cluster. Execute `curl ifconfig.me` to obtain your IP."
 }

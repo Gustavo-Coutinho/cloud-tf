@@ -13,7 +13,7 @@ variable "region" {
   description = "AWS Region in which resources will be created"
 }
 
-variable "seu_ip" {
+variable "your_public_ip" {
   type        = string
   description = "Your public IP address to allow access to the EKS cluster. Execute `curl ifconfig.me` to obtain your IP."
 }
