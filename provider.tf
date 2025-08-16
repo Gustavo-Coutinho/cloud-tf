@@ -10,15 +10,10 @@ terraform {
     }
 
   }
-  backend "s3" {
-    bucket = "ctf-terraform-state-gupoco"
-    key    = "terraform.tfstate"
-    region = "us-east-1"
-  }
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = var.region
 }
 
 provider "kubernetes" {
